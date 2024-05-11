@@ -8,6 +8,8 @@ export default function Home() {
   
   const [webhook, setWebHook] = useState(null)
 
+  const [userAgent, setUserAgent] = useState("")
+
   const br = [
     // if it says it's a webview, let's go with that
     'WebView',
@@ -59,7 +61,7 @@ if (isWebView) {
   //user is not using WebView
 }
 
-
+setUserAgent(userAgent)
 
 
 
@@ -100,6 +102,8 @@ if (isWebView) {
       
 
     <p> WebView : { webhook ? "true" : "false" }  </p>
+
+    <p>{userAgent}</p>
 
     <button onClick={handleClick} > Redirect</button>
 
