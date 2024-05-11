@@ -35,12 +35,22 @@ export default function Home() {
 
   }, [])
 
+  const handleClick = ()=>{
+
+    // window.location.href = "external:https://webviewredirect.vercel.app/"
+
+    window.open('https://webviewredirect.vercel.app', '_system')
+
+  }
+
 
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-24">
       
 
     <p> WebView : { webhook ? "true" : "false" }  </p>
+
+    <button onClick={handleClick} > Redirect</button>
 
     </main>
   );
