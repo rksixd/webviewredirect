@@ -107,6 +107,8 @@ setUserAgent(userAgent)
 
     <button onClick={handleClick} > Redirect</button>
 
+    <a href="https://webviewredirect.vercel.app" onClick={() => window.open("https://webviewredirect.vercel.app", "_system")}> LINK </a>
+
     </main>
   );
 }
