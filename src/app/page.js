@@ -94,30 +94,6 @@ if (isWebView) {
 
 //  new one
 
-var isWebView = false;
-var userAgent = navigator.userAgent;
-
-if (/Android/.test(userAgent)) {
-  // Check the Android version to determine how to differentiate WebView from Chrome
-  var androidVersion = parseFloat(userAgent.slice(userAgent.indexOf("Android")+8));
-  if (androidVersion >= 10) {
-    // For Android 10 and above, check for the "wv" field in the user-agent string
-    isWebView = /(wv)/.test(userAgent);
-  } else {
-    // For versions of Android below 10, check for the "Version/_X.X_" string in the user-agent string
-    isWebView = userAgent.includes("Version/");
-  }
-}
-
-if (isWebView) {
-
-   // user is viewing page from WebView
-
-
-} else {
-
-  //user is not using WebView
-}
 
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-24">
