@@ -34,7 +34,7 @@ export default function Home() {
 
 
     var isWebView = false;
-var userAgent = navigator.userAgent;
+var userAgent = window.navigator.userAgent;
 
 if (/Android/.test(userAgent)) {
   // Check the Android version to determine how to differentiate WebView from Chrome
